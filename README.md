@@ -11,15 +11,8 @@ var bezierPath = Bezier.pathFromPoints(controlPoints)
 var point = Bezier.tween(0.5 ,bezierPath)
 ```
 `static tween(t, waypoints:[Vector]): Vector`  
-returns a vector along the waypoints with a weight of t, works simirlarly to lerping but with an array of vectors instead of only 2.
+returns a vector along the waypoints with a weight of t, works similarly to lerping but with an array of vectors instead of only 2.
 
 `static pathFromPoints(controlPoints:[Vector]):[Vector]`  
-given a set of controlPoints returns an array of vectors that form a smooth line and are evenly spaced. the controlPoints should follow a specific pattern.  
-0 basepoint  
-1 controlpoint  
-2 controlpoint  
-3 basepoint  
-4 controlpoint  
-5 controlpoint  
-6 basepoint  
-...etc
+given a set of controlPoints returns an array of vectors that form a smooth line and are evenly spaced(approximately). the controlPoints should follow a specific pattern.    
+![controlpoints order](http://devmag.org.za/blog/wp-content/uploads/2011/04/bezier_path.png)
