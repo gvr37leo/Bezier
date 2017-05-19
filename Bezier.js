@@ -5,7 +5,7 @@ class Bezier{
         this.p1 = p1;
         this.p2 = p2;
         this.p3 = p3;
-        var numberOfWaypoints = Math.ceil(Bezier.calcLength(this.computeWaypoints(4)) / 20)
+        var numberOfWaypoints = Math.ceil(Bezier.calcLength(this.computeWaypoints(4)) / 10)
         this.waypoints = this.computeWaypoints(numberOfWaypoints)
     }
 
