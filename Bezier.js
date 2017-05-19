@@ -89,3 +89,11 @@ class Bezier{
         return p;
     }
 }
+
+function sinewave(period){
+    return Math.sin(time * Math.PI * 2 / period - Math.PI / 2) * 0.5 + 0.5
+}
+
+function trianglewave(period){
+    return Math.abs(mod((time / period - 0.5), 1) - 0.5) * 2
+}

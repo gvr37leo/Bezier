@@ -7,14 +7,6 @@ var time = 0;
 var bezier = new Bezier(controlPoints[0],controlPoints[1],controlPoints[2],controlPoints[3])
 var bezierPath = Bezier.pathFromPoints(controlPoints)
 
-function sinewave(period){
-    return Math.sin(time * Math.PI * 2 / period - Math.PI / 2) * 0.5 + 0.5
-}
-
-function trianglewave(period){
-    return Math.abs(mod((time / period - 0.5), 1) - 0.5) * 2
-}
-
 loop((dt)=>{
     var wave = trianglewave(20)
     time += dt / 1000;
