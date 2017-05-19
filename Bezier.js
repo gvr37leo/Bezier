@@ -16,7 +16,7 @@ class Bezier{
         return waypoints[low].lerp(waypoints[high],t*lm1 - Math.floor(t*lm1))
     }
 
-    static pathFromPoints(pointArray){
+    static path(pointArray){
         var beziers = [];
         for(var i = 0; i < pointArray.length - 1; i+=3){
             beziers.push(new Bezier(pointArray[i],pointArray[i + 1],pointArray[i + 2],pointArray[i + 3]))

@@ -5,7 +5,7 @@ var controlPoints = [new Vector2(10,10),new Vector2(10,300),new Vector2(200,300)
 var width = 10;
 var time = 0;
 var bezier = new Bezier(controlPoints[0],controlPoints[1],controlPoints[2],controlPoints[3])
-var bezierPath = Bezier.pathFromPoints(controlPoints)
+var bezierPath = Bezier.path(controlPoints)
 
 loop((dt)=>{
     var wave = trianglewave(20)
