@@ -22,7 +22,7 @@ class Bezier{
             beziers.push(new Bezier(pointArray[i],pointArray[i + 1],pointArray[i + 2],pointArray[i + 3]))
         }
         var waypoints = [];
-        for(bezier of beziers){
+        for(var bezier of beziers){
             waypoints = waypoints.concat(bezier.waypoints)
         }
         return Bezier.computeConstantWaypoints(waypoints, waypoints.length);
